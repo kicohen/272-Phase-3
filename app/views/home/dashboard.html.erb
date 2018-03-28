@@ -1,0 +1,47 @@
+<% content_for :pgSpecificNavLink do %>
+  <%= link_to "Dashboard", dashboard_path, class: "navbar-brand" %>
+<% end %>
+
+<div class="row col-12">
+<div class="col-sm-6">
+<div class="card bg_blue_light-no_hover">
+  <div class="card-block">
+    <h3 class="card-title"><i class="fa fa-shopping-cart"></i>  Orders</h3>
+    <p class="card-text">0 new orders since you last logged in.</p>
+  </div>
+  <div class="card-footer" style="text-align: right;">
+    <a href="404.html" class="btn btn-secondary bg_blue_light bg_blue_light_text">View Orders</a>
+    </div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="card bg_blue_light-no_hover">
+  <div class="card-block">
+    <h3 class="card-title"><i class="fa fa-money"></i>  Prices</h3>
+    <p class="card-text">See the current prices for all active items.</p>
+  </div>
+  <div class="card-footer" style="text-align: right;">
+  	<%= link_to "View Current Prices", item_prices_path, :class=>"btn btn-secondary bg_blue_light bg_blue_light_text" %>
+    </div>
+</div>
+</div>
+</div>
+<div class="row col-12">
+	<div class="container">
+	<br>
+	<ul class="list-group">
+	  <li class="list-group-item bg_blue_light-no_hover weighted">Items to Reorder</li>
+	  	<% unless @items_to_reorder.empty? %>
+		 <% for item in @items_to_reorder %>
+			<li class="list-group-item justify-content-between">
+			<%= link_to item.name, item_path(item) %>
+			<span>
+			<span class="badge badge-default badge-pill badge-danger"><%= item.inventory_level %></span>
+			<span class="badge badge-default badge-pill badge-success"><%= item.reorder_level %></span>
+			</span>
+			</li>
+		<% end %>
+		<% end %>
+	</ul>
+	</div>
+</div>

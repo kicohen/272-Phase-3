@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="Alex and Mark Chess Store Information Systems Application Design and Development">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <title>A&amp;M Chess Store</title>
+    <%= render 'partials/favicon' %>
+    <%= stylesheet_link_tag    "application", params[:controller], :media => "all" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <nav>
+    <ul id="home_nav">
+      <li><%= link_to "About", about_path, :id=>'about_button' %></li>
+      <li><%= link_to "Store", store_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><%= link_to "Privacy", privacy_path %></li>
+    </ul>
+  </nav>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, id: "flash_#{name}" %>
+  <% end %>
+  	<%= yield %>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> <!-- Jquery - -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<%= javascript_include_tag "application", params[:controller] %>
+  </body>
+</html>

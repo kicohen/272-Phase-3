@@ -1,0 +1,24 @@
+<!-- Page Specific Navbar -->
+<nav class="navbar navbar-toggleable-md navbar-inverse mb-4" id="page-specific-nav">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#pageSpecificNavbar" aria-controls="pageSpecificNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to "Items", items_path, class: "navbar-brand" %>
+ <div class="collapse navbar-collapse" id="pageSpecificNavbar">
+    <ul class="navbar-nav mr-auto"></ul>
+    <div class="nav navbar-nav navbar-right btn-group" role="group" aria-label="Page Specific Nav">
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle bg_blue_light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="#"><span class="fa fa-check" aria-hidden="true"></span> Boards</a>
+          <a class="dropdown-item" href="#"><span class="fa fa-check" aria-hidden="true"></span> Pieces</a>
+          <a class="dropdown-item" href="#"><span class="fa fa-check" aria-hidden="true"></span> Clocks</a>
+          <a class="dropdown-item" href="#"><span class="fa fa-check" aria-hidden="true"></span> Supplies</a>
+        </div>
+        <button class="btn btn-primary my-2 my-sm-0 bg_blue_main search" type="submit">Search</button>
+        <button class="btn btn-primary my-2 my-sm-0 bg_blue_dark entries" type="submit">Entries</button>
+        <button class="btn btn-success my-2 my-sm-0" type="submit"><%= link_to "Add A New Item", new_item_path, class: "white_text" %></button>
+    </div>
+  </div>
+</nav>

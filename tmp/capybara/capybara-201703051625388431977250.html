@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="Alex and Mark Chess Store Information Systems Application Design and Development">
+    <meta name="author" content="Kenny Cohen">
+    <title>A&amp;M Chess Store</title>
+    <!-- Stylesheets -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"> <!-- tables -->
+    <link rel="stylesheet" media="screen" href="/assets/override-2ff1e9f747a91e3b9a3af68a443a60e55290d63009080c6092f0c32b898b9fd0.css" />
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-57x57-70d02c6b6c1811047763705d0a9ad3b344163067ee38e12c010451bf769a1b82.png" sizes="57x57" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-60x60-02006f6232f1ec8a317e45acad839f0a9690bbdfb9c8d2b4b18d1c9db2b24fb3.png" sizes="60x60" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-72x72-097464a48bfc85aec4f503514733f7b88df0747916a5d3a84aade5cca4ce52df.png" sizes="72x72" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-76x76-6d6851a45825a7a84a42a35d4e74f915c34d0782981fd06119d4a44e3612dc7e.png" sizes="76x76" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-114x114-ff58304a9129fba22804c5aa4e02a8e312b8dd095d731f1f43ca56ff65640feb.png" sizes="114x114" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-120x120-652ff1ae02c9dc7d42cde7b640b76910b0e63f70fbcdb4da0e56f518baec2abe.png" sizes="120x120" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-144x144-3fe4092201234d4ef0fd5023c18892875aade458c69f539e3c62d44356233148.png" sizes="144x144" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-152x152-89e4280fc592309a8ecae39056f52233ec18d83541c4b8e94fcfb591cacd4a0e.png" sizes="152x152" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon/apple-icon-180x180-20d71cbf374859b27ca5b9997ffbcb5e7cff1072f3624258db33ab7cfadd29f2.png" sizes="180x180" />
+<link rel="icon" type="image/png" href="/assets/favicon/android-icon-192x192-43db13a954086ee8198705790d92e6777e3aaa0297b475122eff1c0b805d43e9.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32-4892d15f7c347d44b626e838c7c31285913450971eec27d93efa294af4e6e2ae.png" sizes="32x32" /> 
+<link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96-fa484ea8730d8426b0c8632645a51d28dc917d4ab5a13b1b42289dec492defeb.png" sizes="96x96" /> 
+<link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16-22fda86d7a137c5c22a6392371cb7d0375fd4f290dd128419d1dcb26a12d63e3.png" sizes="16x16" /> 
+<link rel="manifest" type="image/x-icon" href="/assets/favicon/manifest-27eca3e8297eb7ff340deb3849b210185a459b3845456aa4d0036f6d966b3518.json" />
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        <a href="#"><a href="/home"><img id="sidebar-logo" src="/assets/logo-2896d8f7db5d7e0a3a28c67c6f7c291489079c3971472df400f0bf0abde97f62.png" alt="Logo" /></a></a>
+            <ul class="sidebar-nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="/items">Items</a></li>
+                <li><a href="/item_prices">Prices</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="/purchases">Purchases</a></li>
+                <li><a href="#">Users</a></li>
+            </ul>
+        </div>
+
+        <div id="hs_button" class="hide_side_bar">
+            <a href="#menu-toggle" id="menu-toggle">
+            <button type="button" class="btn btn-default btn-md bg-custom" >
+                <span class="fa fa-angle-left" aria-hidden="true" id="toggle-span"></span>
+            </button>
+            </a>
+        </div>
+
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-custom mb-4" id="main-nav">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">A&amp;M</a>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/home">Store</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="/privacy">Privacy</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-user" aria-hidden="true"></span></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Dashboard</a>
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Page Specific Navbar -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse mb-4" id="page-specific-nav">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#pageSpecificNavbar" aria-controls="pageSpecificNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <a class="navbar-brand" href="/item_prices">Prices</a>
+
+         <div class="collapse navbar-collapse" id="pageSpecificNavbar">
+            <ul class="navbar-nav mr-auto"></ul>
+            <div class="nav navbar-nav navbar-right btn-group" role="group" aria-label="Page Specific Nav">
+            
+            </div>
+          </div>
+        </nav>
+          <div id="flash_notice" class="alert alert-info bg_blue_light-no_hover">Changed the price of Basic Chess Pieces</div>
+        
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    
+<table>
+	<tr>			
+		<td>
+	<h2>Item Price Data:</h2>
+	<b>Item:</b>
+	   <a href="/items/8">Basic Chess Pieces</a>
+
+	<b>Price:</b>
+	  $3.05
+
+	<b>Start Date:</b>
+	  2017-03-05
+
+	<b>End Date:</b>
+	  
+
+</td>		
+	</tr>
+</table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script> <!-- datatables dependant -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> <!-- datatables -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script> 
+    // Create the table 
+    $(document).ready(function(){
+        $('table').DataTable();
+        $(document).ready(function(){ 
+            $('.dataTables_filter').addClass("hide");
+            $('.dataTables_length').addClass("hide");
+        });
+
+        $('.search').on("click", function(){
+            $('.dataTables_filter').toggleClass("hide");
+        });
+        $('.entries').on("click", function(){
+            $('.dataTables_length').toggleClass("hide");
+        });
+    });
+    // Side bar toggle
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#toggle-span").toggleClass("fa-angle-left");
+        $("#toggle-span").toggleClass("fa-angle-right");
+    });
+    </script>
+
+</body>
+
+</html>

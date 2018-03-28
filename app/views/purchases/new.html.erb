@@ -1,0 +1,11 @@
+<% content_for :pgSpecificNavLink do %>
+  <%= link_to "Purchases", purchases_path, class: "navbar-brand" %>
+<% end %>
+
+<div class="container">
+
+<h4>New Item Price</h4>
+<br>
+<%= render 'form' %>
+
+</div>

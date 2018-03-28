@@ -1,0 +1,31 @@
+<% content_for :pgSpecificNavLink do %>
+  <%= link_to "Items", items_path, class: "navbar-brand" %>
+<% end %>
+
+<% content_for :pgSpecificButtons do %>
+<button class="btn btn-success my-2 my-sm-0" type="submit"><%= link_to "Create Item", new_item_path, class: "white_text" %></button>
+<button class="btn btn-primary my-2 my-sm-0 bg_blue_main" type="submit"><%= link_to "Edit Item", edit_item_path(@item), class: "white_text" %></button>
+<button class="btn btn-danger my-2 my-sm-0" type="submit"><%= link_to "Delete Item", items_destroy_path(@item), class: "white_text" %></button>
+<% end %>
+
+<%= render partial: "item_data" %>    
+
+<% unless @price_history.empty? %>
+  <%= render partial: "recent_prices" %>
+<% end %>
+
+<div class="container">
+<br>
+<ul class="list-group">
+  <li class="list-group-item similar_items">Similar Items:</li>
+    <% unless @similar_items.empty? %>
+   <% for item in @similar_items %>
+    <li class="list-group-item">
+      <%= link_to item.name, item_path(item) %>
+    </li>
+  <% end %>
+  <% end %>
+</ul>
+
+</div>
+

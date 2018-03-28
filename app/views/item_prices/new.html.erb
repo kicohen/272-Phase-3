@@ -1,0 +1,9 @@
+<% content_for :pgSpecificNavLink do %>
+  <%= link_to "Prices", item_prices_path, class: "navbar-brand" %>
+<% end %>
+
+<div class="container">
+<h4>New Price</h4>
+<br>
+<%= render 'form' %>
+</div>

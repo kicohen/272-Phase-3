@@ -1,0 +1,42 @@
+<div class="col-md-5">
+  <ul class="list-group">
+  <li class="list-group-item similar_items">
+  Item Information:
+  </li>
+  <li class="list-group-item">
+  <b>Name:&nbsp;</b>
+    <%= @item.name %></li>
+
+  <li class="list-group-item">
+  <b>Price:&nbsp;</b>
+    <% if @item.current_price %>
+      <%= number_to_currency(@item.current_price) %>
+    <% else %>
+      N/A
+    <% end %>
+  </li>
+  <li class="list-group-item">
+  <b>Description:&nbsp;</b>
+    <%= @item.description %></li>
+
+  <li class="list-group-item">
+  <b>Color:&nbsp;</b>
+    <%= @item.color %></li>
+
+  <li class="list-group-item">
+  <b>Category:&nbsp;</b>
+    <%= @item.category.capitalize %></li>
+
+  <li class="list-group-item">
+  <b>Weight:&nbsp;</b>
+    <%= @item.weight %></li>
+
+  <li class="list-group-item">
+  <b>Inventory Level:&nbsp;</b>
+    <%= @item.inventory_level %></li>
+
+  <li class="list-group-item">
+  <b>Reorder Level:&nbsp;</b>
+    <%= @item.reorder_level %></li>
+
+</div>  

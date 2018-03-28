@@ -1,0 +1,297 @@
+html, body{
+	padding: 0px;
+	margin: 0px !important; 
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+#main{
+	width: 100%;
+	height: 100vh;
+	background-color: #313945;
+}
+
+#main_title{
+	color: #3C93E7;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	font-weight: 400;
+	font-size: large;
+	left: calc(50% - 40px);
+	top: 30px;
+
+}
+
+#main img{
+	width: 26%;
+	margin-left: 37%;
+	min-width: 300px;
+	margin-top: 100px;
+}
+
+@media screen and (max-width: 1154px){
+	#main img{
+		margin-left: calc(50% - 150px);
+	}
+}
+
+nav {
+	color: #3C93E7;
+	font-size: large;
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	bottom: 30px;
+}
+
+nav a{
+	color: #3C93E7;
+	text-decoration: none;
+	text-align: center;
+}
+nav a:last-child{
+}
+
+nav a:hover{
+	color: #B7CBE9;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	display: inline-block;
+	width: 80px;
+}
+
+#about{
+	width: 100%;
+	background-color: #3C93E7;
+}
+
+.about_left{
+	width: 50%;
+	position: relative;
+	left: 0;
+	background-color: #3C93E7;
+	display: inline-block;
+	height: 100vh;
+	float: left;
+}
+
+.about_right{
+	width: 50%;
+	margin: 0px;
+	padding: 40px 80px;
+	line-height: 2em;
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	background-color: white;
+}
+
+.about_right_fixed{
+	left: 50%;
+}
+
+#about_left h1{
+	width: 100%;
+	text-align: center;
+	font-size: xx-large;
+}
+#about_left img{
+	width: 300px;
+	margin-left: calc(50% - 150px);
+	margin-top: calc(50% - 150px);
+}
+
+#about h1{
+	font-family: 'Roboto' sans-serif;
+	font-weight: 400;
+}
+
+#about h3{
+	font-family: 'Roboto' sans-serif;
+	font-weight: 300;
+}
+
+.about_left_fixed {
+	width: 50%;
+	background-color: #3C93E7;
+	display: inline-block;
+	height: 100vh;
+	float: left;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+.about_left_after {
+	top: 100vh;
+}
+
+#store {
+	width: 100%;
+}
+
+.store_left img {
+	width: 300px;
+	margin-left: calc(50% - 150px);
+	margin-top: calc(50% - 150px);
+}
+
+.store_left {
+	width: 50%;
+	position: relative;
+	left: 0;
+	background-color: white;
+	display: inline-block;
+	height: 100vh;
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+
+.store_right_1 {
+	width: 50%;
+	margin: 0px;
+	padding: 0;
+	position: relative;
+	top: 0px;
+	height: 100vh;
+	margin-left: 50%;
+	background-image: image-url('real_chess4.jpg');
+	background-size: cover;
+	background-position:center center;
+}
+
+.store_right_2 {
+	width: 50%;
+	margin: 0px;
+	padding: 0;
+	position: relative;
+	top: 0px;
+	height: 100vh;
+	margin-left: 50%;
+	background-image: image-url('real_chess1.jpg');
+	background-size: cover;
+	background-position:center center;
+}
+
+.store_left_fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.store_left h2{
+	width: 100%;
+	text-align: center;
+}
+
+.store_left img{
+	text-align: center;
+}
+
+
+#store a{
+	color: #EF4839;
+	text-decoration: none;
+	text-align: center;
+	margin-left: 0;
+	width: 70px
+}
+
+#store a:hover{
+	color: #3C93E7;
+}
+
+#store ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	padding-top: 20px;
+}
+
+#store ul li{
+	display: inline-block;
+	width: 50px;
+	font-weight: 800;
+	font-size: large;
+	text-align: center;
+	color: #EF4839;
+}
+
+.user-profile{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+#contact{
+	/*height: 65vh*/
+	width: 100%;
+	position: relative;
+	background-color: #313945;
+	color: white;
+}
+
+#privacy{
+	/*height: 25vh;*/
+	width: 100%;
+	position: relative;
+	background-color: #3C93E7;
+	color: white;
+}
+
+#footer{
+	/*height: 10vh;*/
+	position: relative;
+	width: 100%;
+	background-color: #313945;
+	color: white;
+}
+
+.similar_items{
+    background-color: #4c8FCC;
+    color: white;
+}
+
+#footer ul {
+	list-style-type: none;
+	font-weight: 100;
+}
+
+#footer a{
+	color: white;
+}
+
+#home_nav a{
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+}
+
+#home_nav a:after{
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+#home_nav a:hover:after {
+	width: 100%;
+	background: #B7CBE9;
+}
+
